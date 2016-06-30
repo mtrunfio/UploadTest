@@ -1,0 +1,21 @@
+
+<div>
+    <style>
+    .bar {
+        height: 18px;
+        background: green;
+    }
+    </style>
+    <span class="btn btn-success fileinput-button">
+        <i class="glyphicon glyphicon-plus"></i>
+        <span>Select video to Upload</span>
+        <input id="uploader{{controlId}}" type="file" name="files" data-url="https://upload.wistia.com" accept="video/mp4,video/x-m4v,video/*">
+    </span>
+    <div id="progress">
+        <div class="bar" ng-style="{'width': progress + '%' }"></div>
+    </div>
+    <span ng-show="url == ''">Status: {{status}}</span>
+    <iframe ng-src="{{url}}" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360" ng-show="url != ''"></iframe>
+</div>
+
+
